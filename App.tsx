@@ -7,25 +7,26 @@
  */
 
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import RootStackScreen from './src/screens/RootStackScreen';
+import { NavigationContainer } from '@react-navigation/native';
 import {PersistGate} from 'redux-persist/integration/react';
 import {TailwindProvider} from 'tailwind-rn';
+import { Provider } from 'react-redux';
 import utilities from './tailwind.json';
-import {Provider} from 'react-redux';
-import {store, persistor} from './src/app/store';
+
+import { MainScreen } from './src/screens/MainScreen';
+// import {store, persistor} from './src-old/app/store';
 
 const App = ()  => {
   return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
+    // <Provider store={store}>
+      // <PersistGate loading={null} persistor={persistor}>
         <TailwindProvider utilities={utilities}>
           <NavigationContainer>
-            <RootStackScreen />
+            <MainScreen />
           </NavigationContainer>
         </TailwindProvider>
-      </PersistGate>
-    </Provider>
+      // </PersistGate>
+    // </Provider>
   );
 };
 

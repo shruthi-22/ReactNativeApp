@@ -1,29 +1,29 @@
 interface Icons {
   [key: string]: {
-    outline: string;
     focused: string;
+    outline: string;
   };
 }
 
-export const icons: Icons = {
-  Home: {
-    outline: 'home-outline',
+export const icons:Icons = {
+  home: {
     focused: 'home',
+    outline: 'home-outline',
   },
-  Contacts: {
-    outline: 'people-outline',
-    focused: 'people',
+  workers: {
+    focused: 'person-circle',
+    outline: 'person-circle-outline',
   },
-  'My Trips': {
-    outline: 'bus-outline',
-    focused: 'bus',
+  operations: {
+    focused: 'calendar',
+    outline: 'calendar-outline',
   },
-  Transfer: {
-    outline: 'wallet-outline',
+  finances: {
     focused: 'wallet',
+    outline: 'wallet-outline',
   },
-  Books: {
-    outline: 'library-outline',
-    focused: 'library',
+  settings: {
+    focused: 'settings',
+    outline: 'settings-outline',
   },
 };
